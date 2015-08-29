@@ -22,10 +22,12 @@ public class Mapper {
     /**
      * <B>Copia un objeto y todas sus relaciones</B>
      *
+     * @param <T>
      * @param claseDestino clase destino a partir de la cual se creara una
      * instancia y se copiaran sus valores, ejemplo TestDTO.class
      * @param origenInstanciado Bean origen instanciado, si es null, la
      * respuesta a este metodo es null
+     * @param copiaRecursivaCollections mapea las entidades internas recursivamente
      */
     public static <T extends Object> T copyCompleto(Object origenInstanciado, Class<T> claseDestino, boolean copiaRecursivaCollections) {
 
